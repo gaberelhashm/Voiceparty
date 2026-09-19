@@ -12,3 +12,4 @@
 *.aab
 app/build/
 *.log
+app/google-services.json
