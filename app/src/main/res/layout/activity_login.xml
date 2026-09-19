@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_purple_spider"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VidorVoice"
+        android:textColor="#E040FB"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2D2342"
+        android:hint="رقم التليفون (مثال +2010...)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="phone"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etCode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2D2342"
+        android:hint="كود التحقق"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="number"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSendCode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="إرسال كود"
+        android:backgroundTint="#7B1FA2"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="تحقق وادخل"
+        android:backgroundTint="#4A148C"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

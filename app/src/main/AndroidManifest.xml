@@ -17,7 +17,7 @@
         android:theme="@style/Theme.VidorVoice"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.VidorVoice"
             android:windowSoftInputMode="adjustResize">
