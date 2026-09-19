@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "854245078269",
+    "project_id": "vidorvoice",
+    "storage_bucket": "vidorvoice.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854245078269:android:23999092dd5aaff6afba94",
+        "android_client_info": {
+          "package_name": "com.voicerooms.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwPA0HMSWx_eHil0l2L4-6MhxR3b97k2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

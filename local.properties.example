@@ -1,0 +1,9 @@
+# انسخ الملف ده إلى local.properties وعدّل المسار حسب جهازك
+# على Termux:
+sdk.dir=/data/data/com.termux/files/home/android-sdk
+
+# على ويندوز مثال:
+# sdk.dir=C\:\\Users\\YourName\\AppData\\Local\\Android\\Sdk
+
+# على لينكس/ماك:
+# sdk.dir=/home/yourname/Android/Sdk

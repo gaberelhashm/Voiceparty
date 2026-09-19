@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VidorVoice</string>
+    <string name="home_title">غرف صوتية</string>
+    <string name="rooms_tab">الغرف</string>
+    <string name="chat_tab">الدردشة</string>
+    <string name="games_tab">الألعاب</string>
+    <string name="profile_tab">الملف</string>
+    <string name="join_room">انضم للغرفة</string>
+    <string name="create_room">إنشاء غرفة</string>
+    <string name="online">متصل</string>
+    <string name="speaking">يتحدث</string>
+    <string name="muted">مكتوم</string>
+</resources>
