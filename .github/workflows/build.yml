@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Create matching google-services.json safely
+    - name: Create complete google-services.json safely
       run: |
         mkdir -p app
         echo '{
@@ -37,6 +37,11 @@ jobs:
                 }
               },
               "oauth_client": [],
+              "api_key": [
+                {
+                  "current_key": "AIzaSyDummyKeyForBuildProcessOnly123456"
+                }
+              ],
               "services": {
                 "appinvite_service": {
                   "other_platform_oauth_client": []
