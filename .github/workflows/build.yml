@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Create google-services.json safely
+    - name: Create matching google-services.json safely
       run: |
         mkdir -p app
         echo '{
@@ -33,7 +33,7 @@ jobs:
               "client_info": {
                 "mobilesdk_app_id": "1:123456789:android:abcdef",
                 "android_client_info": {
-                  "package_name": "com.vindor.voiceparty"
+                  "package_name": "com.voicerooms.app"
                 }
               },
               "oauth_client": [],
@@ -50,7 +50,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Build Debug APK with Gradle 8.7
+    - name: Build Debug APK
       run: ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK Artifact
