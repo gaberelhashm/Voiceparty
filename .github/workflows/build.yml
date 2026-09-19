@@ -19,39 +19,6 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Create complete google-services.json safely
-      run: |
-        mkdir -p app
-        echo '{
-          "project_info": {
-            "project_number": "123456789",
-            "project_id": "voiceparty-app",
-            "storage_bucket": "voiceparty-app.appspot.com"
-          },
-          "client": [
-            {
-              "client_info": {
-                "mobilesdk_app_id": "1:123456789:android:abcdef",
-                "android_client_info": {
-                  "package_name": "com.voicerooms.app"
-                }
-              },
-              "oauth_client": [],
-              "api_key": [
-                {
-                  "current_key": "AIzaSyDummyKeyForBuildProcessOnly123456"
-                }
-              ],
-              "services": {
-                "appinvite_service": {
-                  "other_platform_oauth_client": []
-                }
-              }
-            }
-          ],
-          "configuration_version": "1"
-        }' > app/google-services.json
-
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
