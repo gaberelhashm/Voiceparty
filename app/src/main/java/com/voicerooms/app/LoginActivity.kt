@@ -59,26 +59,39 @@ class LoginActivity : AppCompatActivity() {
                             Toast.makeText(baseContext, "تم إرسال الكود", Toast.LENGTH_SHORT).show()
                         }
                     }).build()
-                PhoneAuthProvider.verifyPhoneNumber(options)
-            } else {
-                Toast.makeText(this, "أدخل رقم الهاتف", Toast.LENGTH_SHORT).show()
-            }
-        }
+  cd ~/VindorVoiceNew/VindorVoice-vindorvoice-30
+cat << 'EOF' > app/src/main/java/com/voicerooms/app/LoginActivity.kt
+package com.voicerooms.app
 
-        btnVerify.setOnClickListener {
-            val code = etCode.text.toString().trim()
-            if (verificationId.isNotEmpty() && code.isNotEmpty()) {
-                val credential = PhoneAuthProvider.getCredential(verificationId, code)
-                auth.signInWithCredential(credential).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        Toast.makeText(this, "تم تسجيل الدخول بنجاح", Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(this, "الكود غير صحيح", Toast.LENGTH_SHORT).show()
-                    }
-                }
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+
+class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
+
+        auth = FirebaseAuth.getInstance()
+
+        val phoneInput = findViewById<EditText>(R.id.etPhone)
+        val loginButton = findViewById<Button>(R.id.btnLogin)
+
+        loginButton.setOnClickListener {
+            val phoneNumber = phoneInput.text.toString().trim()
+            if (phoneNumber.isNotEmpty()) {
+                Toast.makeText(this, "Sending verification code...", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "أدخل الكود بشكل صحيح", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter a valid phone number", Toast.LENGTH_SHORT).show()
             }
         }
     }
 }
+EOF
+
